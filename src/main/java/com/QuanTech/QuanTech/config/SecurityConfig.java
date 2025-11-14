@@ -42,7 +42,7 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request -> request
-                            .requestMatchers("/api/login/**", "/api/employees", "/swagger-ui/**","/api/teams", "/v3/api-docs/**").permitAll()
+                        .requestMatchers("/api/login/**", "/api/employees", "/swagger-ui/**","/api/teams", "/v3/api-docs/**").permitAll()
                         .anyRequest()
                         .authenticated()
                 )

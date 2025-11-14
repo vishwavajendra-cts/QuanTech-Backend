@@ -41,10 +41,6 @@ public class JwtService {
                 .compact();
     }
 
-    public String generateToken(UserDetails user) {
-        return generateToken(user, Map.of());
-    }
-
 
     public String extractUsername(String token) {
         // basically decode it, fetch the claims -> get the username
